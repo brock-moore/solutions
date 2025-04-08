@@ -1,4 +1,7 @@
-def isAnagram(s: str, t: str) -> bool:
+# Return True if two strings are anagrams (characters can be rearranged so strings are equal)
+# and False otherwise
+
+def isAnagramSort(s: str, t: str) -> bool:
         # Create char arrays, sort, and compare
         # Time O(nlogn) for sort time where n = len(s + t)
         # Space O(n) for lists where n = len(s + t)
