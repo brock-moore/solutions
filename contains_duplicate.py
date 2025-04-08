@@ -1,6 +1,6 @@
 # Return True if the integer list nums contains duplicate entries and False otherwise
 
-def hasDuplicate(nums: List[int]) -> bool:
+def hasDuplicateHash(nums: List[int]) -> bool:
     # HashMap single loop
     # Time O(n) hash put and get is O(1)
     # Space O(n) create n sized hash map
@@ -10,6 +10,13 @@ def hasDuplicate(nums: List[int]) -> bool:
             return True
         map[i] = 1
     return False
+    
+def hasDuplicateSet(self, nums: List[int]) -> bool:
+        # Elegant set solution
+        # Time O(n) to create set from nums
+        # Space O(n) for created set
+        nums_set = set(nums)
+        return len(nums_set) != len(nums)
 
 def hasDuplicateBruteForce(nums: List[int]) -> bool:
     # Brute Force - nested for loop, 
